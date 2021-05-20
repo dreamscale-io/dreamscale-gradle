@@ -3,7 +3,7 @@ buildscript {
         jcenter()
         mavenLocal()
         maven {
-            url "https://dl.bintray.com/dreamscale-io/maven-public"
+            url "http://nexus.twilightcity.net:8081/repository/public"
         }
     }
     dependencies {
@@ -20,7 +20,7 @@ ext {
 
     repositoryName = 'maven'
     if (!project.hasProperty("mavenUrl")) {
-        mavenUrl = "https://dl.bintray.com/dreamscale-io/maven-public"
+        mavenUrl = "http://nexus.twilightcity.net:8081/repository/public"
     }
     repositoryPublicUrl = mavenUrl + "/content/groups/public"
     repositoryReleaseUrl = mavenUrl + "/content/repositories/releases"
