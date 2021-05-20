@@ -11,10 +11,6 @@ buildscript {
     }
 }
 
-plugins {
-    id "com.jfrog.bintray" version "1.7"
-}
-
 ext {
     customPublication = true
 
@@ -49,6 +45,9 @@ publishing {
     }
 }
 
+downloadGradle.gradleDownloadBase = "https://downloads.gradle-dn.com/distributions"
+
+/*
 bintray {
         user = project.hasProperty('bintray.user') ? project.property('bintray.user') : System.getenv('BINTRAY_USER')
         key = project.hasProperty('bintray.apiKey') ? project.property('bintray.apiKey') : System.getenv('BINTRAY_API_KEY')
@@ -66,3 +65,4 @@ bintray {
                 labels = ['gradle']
         }
 }
+*/
