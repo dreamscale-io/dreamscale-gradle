@@ -1,4 +1,4 @@
-println "Using the DreamScale Gradle distro"
+println "Using the TwilightCity Gradle distro"
 
 allprojects {
 
@@ -13,13 +13,13 @@ allprojects {
     buildscript {
         ext {
             if (project.hasProperty("repositoryPublicUrl") == false) {
-                repositoryPublicUrl = "http://nexus.twilightcity.net:8081/repository/public
+                repositoryPublicUrl = "http://nexus.twilightcity.net:8081/repository/public"
             }
         }
 
         repositories {
             mavenLocal()
-            jcenter()
+            mavenCentral()
             maven {
                 if (repositoryReadCredentials != null) {
                     credentials repositoryReadCredentials
@@ -41,7 +41,7 @@ allprojects {
 
     repositories {
         mavenLocal()
-        jcenter()
+        mavenCentral()
         maven {
             if (repositoryReadCredentials != null) {
                 credentials repositoryReadCredentials
